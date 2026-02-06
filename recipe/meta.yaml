@@ -1,4 +1,4 @@
-{% set version = '0.6.1' %}
+{% set version = "0.6.2" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/chunked_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/chunked/chunked_{{ version }}.tar.gz
-  sha256: 2aa28bef3f297a7eb9ae669f8ef0d0783112e69648cf1f4c20eb10d7f0dc8612
+  sha256: 9f4923d85b621d1c7d867cbf7b9952da5ee970b58ec60dc0a49ef931dfaeb392
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -49,9 +49,7 @@ test:
 about:
   home: https://github.com/edwindj/chunked
   license: GPL-2.0-only
-  summary: Data stored in text file can be processed chunkwise using 'dplyr' commands. These
-    are recorded and executed per data chunk, so large files can be processed with limited
-    memory using the 'LaF' package.
+  summary: Data stored in text file can be processed chunkwise using 'dplyr' commands. These are recorded and executed per data chunk, so large files can be processed with limited memory using the 'LaF' package.
   license_family: GPL2
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
